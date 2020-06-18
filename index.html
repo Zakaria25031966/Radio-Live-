@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0px;
+        }
+        body{
+            background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+        }
+        div{    
+            width:500px;
+            position:absolute;
+            left:50%;
+            transform:translateX(-50%);
+        }
+        div header{
+            text-align:center;
+            margin:0;
+            color:white;
+            height:280px;
+        }
+        div header img{
+            width:180px;
+            border-radius:50%;
+            margin-top:-2px;
+        }
+        .h2{
+            font-size:150%;
+            font-family: 'Rock Salt', cursive;
+        }
+        #petitdiv2{
+            background:white;
+            width:100%;
+            margin-top:20px;
+        }
+        #divinpetitdiv2 img{
+            width:60px;
+            margin:10px 20px;
+        }
+        #divinpetitdiv2 {
+            display:flex;
+            justify-content:center;
+            position: relative;
+        }
+        div header p{
+            margin-top:17;
+            font-size:25px;
+            font-family: 'Press Start 2P', cursive;
+        }
+        #article{ 
+            text-align:center;
+        }
+        input[type="range"]::-webkit-slider-thumb{ 
+            -webkit-appearance:none;
+            background-color:hsl(0, 100%, 70%);;
+            width:20px;
+            height:20px;
+            border-radius:50%;
+        }
+        input[type="range" i] {
+            width:100%;
+            -webkit-appearance:none;
+            height:3px;
+            background-color:hsla(0, 23%, 79%, 0.59);
+            margin:10px 0px;
+        }
+        #articlecolors{
+            text-align:center;
+            margin-top:30px; 
+        }
+        #articlecolors button{
+            height:25px;
+            width:25px;
+            border-radius:50%;
+            margin-right:10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="granddiv">
+        
+        <header >
+            <h2 class="h2">Mahassine &nbsp; Radio</h2>
+            <img src="https://image.freepik.com/vecteurs-libre/radio-rouge-dessin-anime_6317-281.jpg" />
+            <p id="p">Radio 1</p>
+        </header>
+        
+
+        <div id="petitdiv2">
+            
+            <div id="divinpetitdiv2">
+                
+                <img src="back.png" onclick="f4()" />
+                <img src="play.png" id="playimg" onclick="f1()" />
+                <img src="next.png" onclick="f3()"/>
+                <audio src="" id="audio"></audio>
+
+            </div>
+                           
+           
+            <article id="article">
+
+                <h3 style="font-size:30px;margin-top:20px;font-family: 'MuseoModerno', cursive;color:black;">Volume</h3>
+                <input type="range" onchange="fvolume()" id="input_volume">
+             
+
+            </article>
+
+            <article id="articlecolors">
+                <button id="button1" style="background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);" onclick="fcolor1()"></button>
+                <button id="button2" style="background: linear-gradient(to right, #ef3b36, #ffffff);;" onclick="fcolor2()"></button>
+                <button id="button3" style="background: linear-gradient(to right, #fffc00, rgb(249, 242, 175));;" onclick="fcolor3()"></button>
+                <button id="button4" style="background-image:linear-gradient(to right,#ff7e5f, #feb47b);" onclick="fcolor4()"></button>
+                <button id="button5" style="background: linear-gradient(to right, #ed4264, #ffedbc);" onclick="fcolor5()"></button>
+                <button id="button6" style="background:rgba(17, 20, 64, 0.76);" onclick="fcolor6()"></button>
+                <button id="button7" style="background-image: linear-gradient(to right, #feada6 0%, #f5efef 100%);" onclick="fcolor7()"></button>
+                <button id="button8" style="background-image:linear-gradient(to right,black,white);" onclick="fcolor8()"></button>
+            </article>
+
+        </div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+    <script src="script_volume_speed.js"></script>
+</body>
+</html>
